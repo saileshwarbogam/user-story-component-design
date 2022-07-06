@@ -1,8 +1,9 @@
 import { Card, CardContent, CardMedia } from '@material-ui/core'
 import React from 'react'
+import { Icon } from '../../atoms/Icon/Icon';
 import { ProgressBar } from '../../atoms/ProgressBar/ProgressBar';
 import { Typography } from '../../atoms/Typography/Typography'
-import { ReadingTime } from '../ReadingTime/ReadingTime';
+import { IconLabel } from '../IconLabel/IconLabel';
 
 interface BookCardProps {
   bookImage : string;
@@ -23,7 +24,7 @@ export const BookCard = (props: BookCardProps) => {
       <CardContent>
         <Typography  variant="h5" children={props.bookName}/>
         <Typography variant="body2" children={props.authorName}/>
-        <ReadingTime timeRead = {props.timeRead}/>
+        <IconLabel icon={<Icon icon={<></>}/>} label = {props.timeRead}/>
         <ProgressBar/>
       </CardContent>
       
