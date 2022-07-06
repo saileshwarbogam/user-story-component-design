@@ -4,8 +4,13 @@ import { BookThumbnail } from '../../atoms/BookThumbnail/BookThumbnail'
 import { Button } from '../../atoms/Button/Button'
 import { Typography } from '../../atoms/Typography/Typography'
 import { ReadingTime } from '../../molecules/ReadingTime/ReadingTime'
+interface BookDetailsProps {
+  bookName : string;
+  description : string;
+  authorName : string;
 
-export const BookDetails = () => {
+}
+export const BookDetails = (props : BookDetailsProps) => {
   const handleReadNow =() => {
 
   }
@@ -13,15 +18,15 @@ export const BookDetails = () => {
 
   }
   const handleSendToKindle =() => {
-    
+
   }
   return (
     <>
       <Grid container direction="row">
         <Grid item>
-          <Typography children='Book Name' variant="h2"/>
-          <Typography children='Description' variant="h3"/>
-          <Typography children="Author Name" variant='h3'/>
+          <Typography children={props.bookName} variant="h2"/>
+          <Typography children={props.description} variant="h3"/>
+          <Typography children={props.authorName} variant='h3'/>
           <ReadingTime timeRead='time'/>
           <Button children='Read Now' variant="contained" onclick={handleReadNow}/>
           <Button children='Buy Book' variant="outlined" onclick={handleBuyBook}/>
