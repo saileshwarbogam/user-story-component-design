@@ -1,5 +1,5 @@
 import { Grid } from '@material-ui/core'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button } from '../../atoms/Button/Button'
 import { Logo } from '../../atoms/Logo/Logo'
 import { Typography } from '../../atoms/Typography/Typography'
@@ -9,9 +9,14 @@ import { Explore } from '../Explore/Explore'
 export const Header = () => {
   const [open , setOpen] = useState<Boolean>(false);
   const handleChange =() => {
-
+    if(open === false) setOpen(true);
+    else setOpen(false);
+    
   }
   let data = [""];
+  useEffect(() => {
+      //get data
+  },[]);
   return (
     <>
       <Grid container direction="row">
