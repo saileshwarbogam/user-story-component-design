@@ -1,7 +1,13 @@
 import React from 'react'
-
-export const Explore = () => {
+import { Button } from '../../atoms/Button/Button'
+interface ExploreProps {
+  data : string[];
+}
+export const Explore = ({data} : ExploreProps) => {
   return (
-    <div>Explore</div>
+    <>
+      <Button children='Explore' variant='' onclick={()=>{}}/>
+      {/* Render explore menu */}
+    </>
   )
 }

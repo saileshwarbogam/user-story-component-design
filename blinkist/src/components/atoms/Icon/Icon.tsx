@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { ReactComponentElement, ReactElement } from 'react'
 
-export const Icon = () => {
+interface IconProps {
+  icon: any
+}
+
+export const Icon = ({icon}: IconProps) => {
   return (
-    <div>Icon</div>
+    <div>
+      {icon}
+    </div>
   )
 }

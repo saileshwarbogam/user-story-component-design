@@ -1,7 +1,32 @@
+import { Card, CardContent, CardMedia } from '@material-ui/core'
 import React from 'react'
+import { ProgressBar } from '../../atoms/ProgressBar/ProgressBar';
+import { Typography } from '../../atoms/Typography/Typography'
+import { ReadingTime } from '../ReadingTime/ReadingTime';
 
-export const BookCard = () => {
+interface BookCardProps {
+  bookImage : string;
+  bookName : string;
+  authorName : string;
+  timeRead : string;
+}
+
+export const BookCard = (props: BookCardProps) => {
   return (
-    <div>BookCard</div>
+    <Card>
+      <CardMedia
+        component="img"
+        height="140"
+        image={props.bookImage}
+        alt="book name"
+      />
+      <CardContent>
+        <Typography  variant="h5" children={props.bookName}/>
+        <Typography variant="body2" children={props.authorName}/>
+        <ReadingTime timeRead = {props.timeRead}/>
+        <ProgressBar/>
+      </CardContent>
+      
+    </Card>
   )
 }
