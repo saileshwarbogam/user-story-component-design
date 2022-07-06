@@ -1,7 +1,11 @@
 import { Grid } from '@material-ui/core'
 import React, { useEffect } from 'react'
 
-export const Footer = () => {
+interface FooterData {
+  data : string[];
+}
+
+export const Footer = (props : FooterData) => {
     
   return (
     <div>

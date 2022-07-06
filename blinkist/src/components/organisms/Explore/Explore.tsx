@@ -2,6 +2,7 @@ import React from 'react'
 import { Button } from '../../atoms/Button/Button'
 interface ExploreProps {
   data : string[];
+  onclick: ()=>void;
 }
 export const Explore = ({data} : ExploreProps) => {
   return (

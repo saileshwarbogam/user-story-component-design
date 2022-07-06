@@ -12,6 +12,9 @@ interface BookCardProps {
 }
 
 export const BookCard = (props: BookCardProps) => {
+  const handleChange = () => {
+    
+  }
   return (
     <Card>
       <CardMedia
@@ -19,6 +22,7 @@ export const BookCard = (props: BookCardProps) => {
         height="140"
         image={props.bookImage}
         alt="book name"
+        onClick={handleChange}
       />
       <CardContent>
         <Typography  variant="h5" children={props.bookName}/>
