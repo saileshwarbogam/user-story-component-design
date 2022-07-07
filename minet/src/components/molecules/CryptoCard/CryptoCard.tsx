@@ -3,18 +3,24 @@ import React from 'react'
 import { Avatar } from '../../atoms/Avatar/Avatar'
 import { Typography } from '../../atoms/Typography/Typography'
 
-export const CryptoCard = () => {
+interface CryptoCardInterface {
+    src: string;
+    currencyName : string;
+    currencyValue : string;
+} 
+
+export const CryptoCard = (props : CryptoCardInterface) => {
   return (
     <>
         <Grid container direction="column" >
             <Grid item>
-                <Avatar src='bitcoin.png'/>
+                <Avatar src={props.src}/>
             </Grid>
             <Grid item>
-                <Typography variant='h3' children="Bitcoin"/>
+                <Typography variant='h3' children={props.currencyName}/>
             </Grid>
             <Grid item>
-                <Typography variant='h3' children="$3,406,069.54"/>
+                <Typography variant='h3' children={props.currencyValue}/>
             </Grid>
 
         </Grid>

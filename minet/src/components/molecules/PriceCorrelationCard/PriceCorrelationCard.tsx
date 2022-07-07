@@ -2,7 +2,11 @@ import { Grid } from '@mui/material';
 import React, { useEffect } from 'react'
 import { Avatar } from '../../atoms/Avatar/Avatar';
 
-export const PriceCorrelationCard = () => {
+interface PriceCorrelationCardProps {
+  src : string;
+}
+
+export const PriceCorrelationCard = (props : PriceCorrelationCardProps) => {
   let data = [""];
   useEffect(() => {
     //get data
@@ -14,7 +18,7 @@ export const PriceCorrelationCard = () => {
         data.map(data => (
           <Grid container direction="row">
             <Grid item>
-              <Avatar src='crypto.png' />
+              <Avatar src={props.src} />
             </Grid>
             <Grid item>
               {/* render crypto details */}

@@ -1,7 +1,14 @@
 import { Grid } from '@mui/material';
 import React, { useEffect } from 'react'
 
-export const WatchList = () => {
+
+interface WatchListProps {
+    cryptoImg : string;
+    cryptoName : string;
+    value : string;
+}
+
+export const WatchList = (props : WatchListProps) => {
 
     useEffect(() => {
         // get data
@@ -17,7 +24,7 @@ export const WatchList = () => {
                             {/* CryptoDetails */}
                         </Grid>
                         <Grid item>
-                            {/* CryptoDetails */}
+                            {/* Crypto Graph */}
                         </Grid>
                     </Grid>
                 </Grid>

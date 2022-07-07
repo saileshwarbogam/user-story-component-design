@@ -1,5 +1,6 @@
 import { Grid } from '@mui/material'
 import React from 'react'
+import { Button } from '../../atoms/Button/Button'
 import { Typography } from '../../atoms/Typography/Typography'
 
 const timePeriod = [

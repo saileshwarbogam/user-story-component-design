@@ -2,7 +2,11 @@ import { Grid, Typography } from '@mui/material'
 import React from 'react'
 import { Button } from '../../atoms/Button/Button'
 
-export const AmountDetails = () => {
+interface AmountDetailsProps {
+    amount : string
+}
+
+export const AmountDetails = (props : AmountDetailsProps) => {
     const handleBuyMax = ()=> {
 
     }
@@ -11,7 +15,7 @@ export const AmountDetails = () => {
             <Typography children="Amount details"/>
             <Grid container>
                 <Grid item>
-                <Typography  children="$34,000"/>
+                <Typography  children={props.amount}/>
                 </Grid>
                 <Grid item>
                 <Button children="Buy max" variant='outlined' onclick={handleBuyMax}/>

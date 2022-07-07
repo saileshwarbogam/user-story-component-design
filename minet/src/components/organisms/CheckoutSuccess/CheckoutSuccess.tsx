@@ -4,13 +4,13 @@ import { Avatar } from '../../atoms/Avatar/Avatar'
 import { Button } from '../../atoms/Button/Button'
 import { Typography } from '../../atoms/Typography/Typography'
 
-export const CheckoutSuccess = () => {
-    const handleBuyCrypto = ()=> {
+interface CheckoutSuccessProps {
+    amount : string;
 
-    }
-    const handleGoToUsdCoin = () => {
-        
-    }
+}
+
+export const CheckoutSuccess = (props : CheckoutSuccessProps) => {
+
   return (
     <>
         <Grid container>
@@ -18,15 +18,17 @@ export const CheckoutSuccess = () => {
                 <Avatar src='tickmark.png'/>
             </Grid>
             <Grid item>
-                <Typography children="0.023451 BTC" variant="h1"/>
+                <Typography children={props.amount} variant="h1"/>
             </Grid>
             <Grid item>
                 <Grid container direction="row">
                     <Grid item>
-                        <Button children='Buy Crypto' onclick={handleBuyCrypto} variant='outlined'/>
+                        {/* Link to buy page */}
+                        <Button children='Buy Crypto' onclick={()=>{}} variant='outlined'/>
                     </Grid>
                     <Grid item>
-                        <Button children='Go To Usd Coin' onclick={handleGoToUsdCoin} variant='contained'/>
+                        {/* Linl to wallet page */}
+                        <Button children='Go To Usd Coin' onclick={()=>{}} variant='contained'/>
                     </Grid>
                 </Grid>
             </Grid>

@@ -5,12 +5,7 @@ import { Button } from '../../atoms/Button/Button'
 import { Typography } from '../../atoms/Typography/Typography'
 
 export const Header = () => {
-    const handleSell =()=> {
 
-    }
-    const handleBuy = () => {
-
-    }
   return (
     <>
         <Grid container>
@@ -20,10 +15,12 @@ export const Header = () => {
             <Grid item>
                 <Grid container>
                     <Grid item>
-                        <Button children="sell" onclick={handleSell} variant="contained"/>
+                        {/* Link ti sell page */}
+                        <Button children="sell" onclick={()=>{}} variant="contained"/>
                     </Grid>
                     <Grid item>
-                        <Button children="Buy" onclick={handleBuy} variant="contained"/>
+                        {/* Link to buy page */}
+                        <Button children="Buy" onclick={()=> {}} variant="contained"/>
                     </Grid>
                     <Grid item>
                         <Avatar src="user.png"/>

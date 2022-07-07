@@ -2,7 +2,15 @@ import { Grid } from '@mui/material';
 import { any } from 'prop-types';
 import React, { useEffect } from 'react'
 
-export const RecentTransaction = () => {
+interface RecentTransactionProps {
+    date : string;
+    isSold : boolean;
+    isPurchased : boolean;
+    priceInDollars : string;
+    priceInCrypto : string;
+}
+
+export const RecentTransaction = (props : RecentTransactionProps) => {
     let recentTransactions = [""];
     useEffect(()=> {
         // get recent transaction data
@@ -12,7 +20,7 @@ export const RecentTransaction = () => {
     <div>
         {
             recentTransactions.map(recentTransaction =>(
-                <Grid container direction="column">
+                <Grid container direction="row">
                         {/* render recent transactions */}
                 </Grid>
             ))

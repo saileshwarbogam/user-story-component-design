@@ -1,14 +1,15 @@
 import { TextField } from '@material-ui/core'
 import React from 'react'
 
-export const SearchBar = () => {
+interface SearchBarProps {
+  handleChange : () => void;
+}
 
-    const handleChange = () => {
-        
-    }
+export const SearchBar = (props : SearchBarProps) => {
+
   return (
     <>
-        <TextField onChange={handleChange}/>
+        <TextField onChange={props.handleChange}/>
     </>
   )
 }

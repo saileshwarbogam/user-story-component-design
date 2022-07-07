@@ -3,11 +3,13 @@ import React from 'react'
 import { Button } from '../../atoms/Button/Button'
 import { Typography } from '../../atoms/Typography/Typography'
 
-export const BuyCrypto = () => {
+interface BuyCrypto {
+    buyingAmount : string;
+    
+}
+export const BuyCrypto = (props: BuyCrypto) => {
 
-    const handleBuyNow = ()=> {
 
-    }
   return (
     <>
         <Grid container>
@@ -17,7 +19,7 @@ export const BuyCrypto = () => {
                         <Typography children="You are buying" variant='h3'/>
                     </Grid>
                     <Grid item>
-                        <Typography children="0.023451 BTC" variant='h2'/>
+                        <Typography children={props.buyingAmount} variant='h2'/>
                     </Grid>
                     <Grid item>
                         <Typography children="1BTC = $3,406,069.54" variant='h3'/>
@@ -30,7 +32,8 @@ export const BuyCrypto = () => {
                 {/* delivey fee */}
             </Grid>
             <Grid item>
-                <Button children='Buy Now' variant='contained' onclick={handleBuyNow}/>
+                {/* Link to checkout */}
+                <Button children='Buy Now' variant='contained' onclick={()=>{}}/>
             </Grid>
 
         </Grid>
